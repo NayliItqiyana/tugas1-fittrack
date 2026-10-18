@@ -14,3 +14,19 @@ public class Member {
     private String noTelepon;
     private String tanggalDaftar;
     private String jenisPaket;
+
+/**
+     * Constructor lengkap untuk menginisialisasi seluruh atribut member.
+     * Menggunakan setter untuk memastikan validasi diterapkan.
+     * 
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon aktif member
+     * @param tanggalDaftar tanggal pendaftaran member
+     * @param jenisPaket    jenis paket keanggotaan
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
