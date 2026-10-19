@@ -30,3 +30,23 @@ public class Member {
         setTanggalDaftar(tanggalDaftar);
         setJenisPaket(jenisPaket);
     }
+/**
+     * Constructor tanpa paket (menggunakan constructor overloading).
+     * Jenis paket otomatis diisi dengan nilai default "Basic".
+     * 
+     * @param nama          nama lengkap member
+     * @param noTelepon     nomor telepon aktif member
+     * @param tanggalDaftar tanggal pendaftaran member
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, DEFAULT_PAKET);
+    }
+
+/**
+     * Mendapatkan nama lengkap member.
+     * 
+     * @return nama member
+     */
+    public String getNama() {
+        return nama;
+    }
