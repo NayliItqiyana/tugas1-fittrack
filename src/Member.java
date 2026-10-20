@@ -50,3 +50,20 @@ public class Member {
     public String getNama() {
         return nama;
     }
+    
+/**
+     * Mengubah nama member setelah melalui validasi.
+     * Nama tidak boleh kosong atau hanya berisi spasi.
+     * 
+     * @param nama nama baru member
+     */
+    public void setNama(String nama) {
+        if (nama == null || nama.trim().isEmpty()) {
+            System.out.println("[Penolakan Validasi] Nama tidak boleh kosong atau hanya berisi spasi.");
+            if (this.nama == null) {
+                this.nama = "Tanpa Nama";
+            }
+            return;
+        }
+        this.nama = nama;
+    }
