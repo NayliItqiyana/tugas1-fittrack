@@ -67,3 +67,12 @@ public class Member {
         }
         this.nama = nama;
     }
+    
+/**
+     * Mendapatkan nomor telepon member.
+     * 
+     * @return nomor telepon member
+     */
+    public String getNoTelepon() {
+        return noTelepon;
+    }
