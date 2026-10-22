@@ -76,3 +76,20 @@ public class Member {
     public String getNoTelepon() {
         return noTelepon;
     }
+
+ /**
+     * Mengubah nomor telepon member setelah melalui validasi format.
+     * Wajib diawali angka 0 dan memiliki panjang minimal 10 digit.
+     * 
+     * @param noTelepon nomor telepon baru
+     */
+    public void setNoTelepon(String noTelepon) {
+        if (noTelepon == null || !noTelepon.startsWith("0") || noTelepon.length() < MIN_LENGTH_TELEPON) {
+            System.out.println("[Penolakan Validasi] Nomor telepon harus diawali angka 0 dan minimal 10 digit. Nilai '" + noTelepon + "' ditolak.");
+            if (this.noTelepon == null) {
+                this.noTelepon = "0800000000";
+            }
+            return;
+        }
+        this.noTelepon = noTelepon;
+    }
