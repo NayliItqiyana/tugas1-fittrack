@@ -93,3 +93,12 @@ public class Member {
         }
         this.noTelepon = noTelepon;
     }
+
+ /**
+     * Mendapatkan tanggal pendaftaran member.
+     * 
+     * @return tanggal daftar member
+     */
+    public String getTanggalDaftar() {
+        return tanggalDaftar;
+    }
