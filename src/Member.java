@@ -102,3 +102,19 @@ public class Member {
     public String getTanggalDaftar() {
         return tanggalDaftar;
     }
+
+/**
+     * Mengubah tanggal pendaftaran member.
+     * 
+     * @param tanggalDaftar tanggal daftar baru
+     */
+    public void setTanggalDaftar(String tanggalDaftar) {
+        if (tanggalDaftar == null || tanggalDaftar.trim().isEmpty()) {
+            System.out.println("[Penolakan Validasi] Tanggal daftar tidak boleh kosong.");
+            if (this.tanggalDaftar == null) {
+                this.tanggalDaftar = "01-01-2026";
+            }
+            return;
+        }
+        this.tanggalDaftar = tanggalDaftar;
+    }
