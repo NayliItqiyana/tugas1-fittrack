@@ -118,3 +118,12 @@ public class Member {
         }
         this.tanggalDaftar = tanggalDaftar;
     }
+
+/**
+     * Mendapatkan jenis paket keanggotaan member.
+     * 
+     * @return jenis paket
+     */
+    public String getJenisPaket() {
+        return jenisPaket;
+    }
