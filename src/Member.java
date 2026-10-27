@@ -142,3 +142,15 @@ public class Member {
         }
         this.jenisPaket = jenisPaket;
     }
+
+/**
+     * Mengembalikan representasi teks dari objek Member agar tercetak rapi dan berlabel.
+     * 
+     * @return string informasi member
+     */
+    @Override
+    public String toString() {
+        return "Member [Nama=" + nama + ", No Telepon=" + noTelepon + 
+               ", Tanggal Daftar=" + tanggalDaftar + ", Jenis Paket=" + jenisPaket + "]";
+    }
+}
