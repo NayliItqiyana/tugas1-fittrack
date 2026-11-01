@@ -23,3 +23,10 @@ public class TesFitTrack {
 
         System.out.println("\n--- Skenario 2: Sengaja Memasukkan Data Tidak Valid pada Constructor ---");
         Member memberInvalid = new Member("   ", "12345", "21-08-2026", "SuperVIP");
+
+        System.out.println("\n--- Skenario 3: Menguji Setter dengan Nilai Tidak Valid pada Objek Jadi ---");
+        System.out.println("Nilai awal member[0] No. Telepon: " + daftarMember[0].getNoTelepon());
+        
+        daftarMember[0].setNoTelepon("12345"); 
+        
+        System.out.println("Nilai setelah setter ditolak No. Telepon: " + daftarMember[0].getNoTelepon());
