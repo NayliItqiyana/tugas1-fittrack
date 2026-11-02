@@ -30,3 +30,12 @@ public class TesFitTrack {
         daftarMember[0].setNoTelepon("12345"); 
         
         System.out.println("Nilai setelah setter ditolak No. Telepon: " + daftarMember[0].getNoTelepon());
+         
+        System.out.println("\n--- Skenario 4: Mencetak Seluruh Data Member dari Array Memakai For Loop ---");
+        for (int i = 0; i < daftarMember.length; i++) {
+            System.out.println("Data ke-" + (i + 1) + ": " + daftarMember[i].toString());
+        }
+        
+        System.out.println("\nObjek Invalid dengan Nilai Default Aman: " + memberInvalid.toString());
+    }
+}
