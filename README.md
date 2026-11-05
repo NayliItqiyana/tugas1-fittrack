@@ -3,7 +3,7 @@
 # Identitas
 * Nama: Nayli Itqiyana
 * NPM: 250810701100025
-* Praktikum Pemrograman Berorientasi Objek
+* Praktikum Pemrograman Berorientasi Objek A
 
 ---
 
@@ -24,11 +24,13 @@ FitTrack adalah aplikasi konsol berbasis bahasa pemrograman Java yang dirancang 
 
 # Konsep OOP yang Diterapkan
 
-* Enkapsulasi (Encapsulation): Melindungi atribut class Member menggunakan modifier private dan mengontrol aksesnya via getter dan setter ber-validasi.
-* Polimorfisme (Method Overriding): Meng-override method toString() dari class Object untuk menghasilkan format cetak data yang kustom.
-* Constructor Overloading: Menyediakan beberapa variasi constructor untuk fleksibilitas pembuatan objek member.
-* Abstraksi Data (Abstraction): Menyembunyikan detail logika validasi di dalam class Member dari class penguji (TesFitTrack).
-* Objek & Class (Objects & Classes): Menerapkan rancangan class Member sebagai blueprint untuk menciptakan multiple instance objek dalam array.
+| Konsep OOP | Lokasi Penerapan | Alasan Pemilihan |
+| :--- | :--- | :--- |
+| **Enkapsulasi (Encapsulation)** | Atribut (`private`) serta method *getter* dan *setter* di class `Member` | Melindungi atribut agar tidak diakses atau diubah secara sembarangan, serta memastikan setiap perubahan data wajib melalui validasi ketat. |
+| **Polimorfisme (Method Overriding)** | Method `toString()` di class `Member` | Meng-*override* method bawaan dari class `Object` untuk menghasilkan format cetak informasi objek yang kustom, rapi, dan berlabel. |
+| **Constructor Overloading** | Constructor berparameter lengkap dan constructor tanpa paket di class `Member` | Memberikan fleksibilitas dalam instansiasi objek, di mana constructor tanpa paket otomatis mengeset nilai *default* `Basic` via pemanggilan `this(...)`. |
+| **Abstraksi Data (Abstraction)** | Logika validasi di dalam class `Member` | Menyembunyikan detail kompleksitas validasi data dari class penguji (`TesFitTrack`), sehingga class utama cukup menggunakan method yang tersedia tanpa tahu proses rumit di dalamnya. |
+| **Objek & Class (Objects & Classes)** | Class `Member` dan array objek pada class `TesFitTrack` | Menerapkan rancangan class `Member` sebagai *blueprint* untuk menciptakan beberapa *instance* objek yang disimpan dan dikelola secara terstruktur di dalam array. |
 
 ---
 
@@ -43,6 +45,13 @@ tugas1-fittrack/
 └── README.md
 ```
 ---
+
+# Prasyarat
+
+- **Java Development Kit (JDK)**: Versi 21.
+- **IDE / Editor**: Visual Studio Code atau IntelliJ IDEA dengan ekstensi Java Support.
+
+----
 
 # Cara Menjalankan Program
 
@@ -106,3 +115,20 @@ Tgl Daftar  : 21-08-2026
 Paket       : Basic
 ============================================================
 ```
+---
+
+# Nilai Default
+
+Jika data yang dimasukkan saat pembuatan objek atau perubahan atribut melanggar aturan validasi, sistem tidak akan menghentikan program melainkan menggunakan nilai default yang aman berikut:
+- **Nama**: Otomatis diatur menjadi `"Tanpa Nama"` jika kosong atau hanya berisi spasi.
+- **Nomor Telepon**: Otomatis diatur menjadi `"0800000000"` jika format salah (tidak diawali angka 0 atau kurang dari 10 digit).
+- **Tanggal Daftar**: Otomatis diatur menjadi `"01-01-2026"` jika kosong.
+- **Jenis Paket**: Otomatis diatur menjadi `"Basic"` jika di luar pilihan Basic, Premium, atau VIP.
+
+---
+
+# Batasan dan Pengembangan Lanjutan
+
+- **Batasan**: Sistem saat ini masih berjalan secara *offline* di konsol terminal dan penyimpanan data bersifat sementara (*in-memory* array) selama program berjalan, belum terhubung ke *database* eksternal.
+- **Pengembangan Lanjutan**: Dapat dikembangkan menggunakan penyimpanan berbasis *database* (seperti MySQL menggunakan JDBC), penambahan antarmuka grafis (GUI), serta fitur pencarian dan pembaruan data member secara interaktif.
+---
